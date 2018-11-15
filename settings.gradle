@@ -1,1 +1,1 @@
-include ':app', ':othermodule', ':malib', ':actund'
+include ':app', ':othermodule', ':malib', ':actund', ':interact'
