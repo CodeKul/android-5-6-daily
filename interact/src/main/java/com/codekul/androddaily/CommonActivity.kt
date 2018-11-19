@@ -41,10 +41,11 @@ class CommonActivity : AppCompatActivity() {
 
         super.onBackPressed()
     }
+    data class MgCl(
+            val r : Float,
+            val g : Float,
+            val b : Float
+    )
 }
 
-data class MgCl(
-        val r : Float,
-        val g : Float,
-        val b : Float
-)
+
