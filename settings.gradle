@@ -1,1 +1,1 @@
-include ':app', ':othermodule', ':malib', ':actund', ':interact', ':lifecycle', ':jetpack'
+include ':app', ':othermodule', ':malib', ':actund', ':interact', ':lifecycle', ':jetpack', ':fragments'
