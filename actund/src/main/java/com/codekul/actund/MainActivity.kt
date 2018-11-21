@@ -1,5 +1,6 @@
 package com.codekul.actund
 
+import android.content.res.Configuration
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -44,6 +45,16 @@ class MainActivity : AppCompatActivity() {
                     TAG,
                     "User Name is ${etUsNm.text} and password is ${etPass.text}"
             )
+        }
+    }
+
+    override fun onConfigurationChanged(newConfig: Configuration?) {
+        super.onConfigurationChanged(newConfig)
+
+        when(newConfig?.orientation) {
+            Configuration.ORIENTATION_LANDSCAPE -> Log.i("@codekul", "Landscape orientation")
+            Configuration.ORIENTATION_PORTRAIT -> Log.i("@codekul", "Portrait orientation")
+            else -> Log.i("@codekul", "Default Orientation")
         }
     }
 }

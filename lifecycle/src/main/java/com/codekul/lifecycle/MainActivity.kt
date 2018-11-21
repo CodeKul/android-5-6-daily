@@ -12,6 +12,8 @@ class MainActivity : AppCompatActivity() {
         toast("onCreate")
         setContentView(R.layout.activity_main)
 
+        imgDt.setImageResource(R.drawable.ic_cup)
+
         btOk.setOnClickListener {
             txDt.text = System.currentTimeMillis().toString()
         }
