@@ -2,6 +2,7 @@ package com.example.fragments
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v4.app.Fragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -9,13 +10,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        loadFrag()
+        loadFrag(ContentFragment.getInstance(
+                R.drawable.ic_launcher_background
+        ))
     }
 
-    fun loadFrag()  {
+    fun loadFrag(frag : Fragment)  {
 
         val txn = supportFragmentManager.beginTransaction()
-        txn.replace(R.id.frameLayout, ContentFragment())
+        txn.replace(R.id.frameLayout, frag)
         txn.commit()
     }
 }

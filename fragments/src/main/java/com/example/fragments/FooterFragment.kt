@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 
 
 /**
@@ -13,10 +14,40 @@ import android.view.ViewGroup
  *
  */
 class FooterFragment : Fragment() {
+    companion object {
+
+        fun getInstance() : FooterFragment {
+
+            val frag = FooterFragment()
+            val bn = Bundle()
+            frag.arguments = bn
+
+            return frag
+        }
+    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_footer, container, false)
+
+        val hostActivity = activity as MainActivity
+
+        val rtVw = inflater.inflate(R.layout.fragment_footer, container, false)
+
+        rtVw.findViewById<Button>(R.id.btnRotate).setOnClickListener {
+            hostActivity.loadFrag(RotateFragment())
+        }
+
+        rtVw.findViewById<Button>(R.id.btnFade).setOnClickListener {
+            hostActivity.loadFrag(
+                    ContentFragment.getInstance(R.drawable.ic_donation)
+            )
+        }
+
+        rtVw.findViewById<Button>(R.id.btnScale).setOnClickListener {
+            hostActivity.loadFrag(FooterFragment())
+        }
+
+
+        return rtVw
     }
 }
