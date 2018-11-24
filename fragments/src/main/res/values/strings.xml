@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">Fragments</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txtRotate">Rotate</string>
+    <string name="txtScale">Scale</string>
+    <string name="txtFade">Fade</string>
+
+    <dimen name="wd">150dp</dimen>
+    <dimen name="ht">60dp</dimen>
 </resources>

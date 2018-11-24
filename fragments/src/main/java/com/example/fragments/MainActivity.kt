@@ -16,7 +16,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun loadFrag(frag : Fragment)  {
-
         val txn = supportFragmentManager.beginTransaction()
         txn.replace(R.id.frameLayout, frag)
         txn.commit()

@@ -9,24 +9,27 @@
 
     <Button
         android:id="@+id/btnRotate"
-        android:text="Rotate"
+        android:text="@string/txtRotate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         />
 
     <Button
         android:id="@+id/btnScale"
-        android:text="Scale"
+        android:text="@string/txtScale"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         />
 
     <Button
         android:id="@+id/btnFade"
-        android:text="Fade"
+        android:text="@string/txtFade"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         />
 
+    <Button
+        style="@style/btnStyle"
+        android:text="Okay"/>
 
 </LinearLayout>

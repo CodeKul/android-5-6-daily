@@ -8,10 +8,4 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="btnStyle">
-        <item name="android:textColor">@color/pureRed</item>
-        <item name="android:layout_width">@dimen/wd</item>
-        <item name="android:layout_height">@dimen/ht</item>
-    </style>
-
 </resources>
