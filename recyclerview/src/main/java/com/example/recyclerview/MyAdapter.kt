@@ -10,7 +10,8 @@ import android.widget.TextView
 
 class MyAdapter (
         private val context : Context,
-        private val dataSet : List<MyData>
+        private val dataSet : List<MyData>,
+        private  val fn : (pos : Int) -> Unit
 ): RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, p1: Int): MyViewHolder {
@@ -30,6 +31,7 @@ class MyAdapter (
 
     override fun onBindViewHolder(holder: MyViewHolder, pos: Int) {
         val itm = dataSet[pos]
+        holder.view.setOnClickListener { fn(pos) }
         holder.img().setImageResource(itm.imgId)
         holder.txt().text = itm.txt
     }

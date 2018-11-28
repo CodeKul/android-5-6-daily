@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -36,7 +37,9 @@ class RecyclerFragment : Fragment() {
         dataSet.add(MyData(R.mipmap.ic_launcher_round, "Apple"))
         dataSet.add(MyData(R.mipmap.ic_launcher_round, "Symbian"))
 
-        viewAdapter = MyAdapter(activity as Context, dataSet)
+        viewAdapter = MyAdapter(activity as Context, dataSet) {
+            Log.i("@codekul", "Clicked $it")
+        }
         recyclerView.adapter = viewAdapter
 
 
