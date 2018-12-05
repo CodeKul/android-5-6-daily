@@ -18,6 +18,7 @@
             <option value="$PROJECT_DIR$/malib" />
             <option value="$PROJECT_DIR$/othermodule" />
             <option value="$PROJECT_DIR$/recyclerview" />
+            <option value="$PROJECT_DIR$/statusbarnotifications" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
