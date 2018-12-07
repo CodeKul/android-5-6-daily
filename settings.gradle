@@ -1,1 +1,1 @@
-include ':app', ':othermodule', ':malib', ':actund', ':interact', ':lifecycle', ':jetpack', ':fragments', ':recyclerview', ':dialogs', ':statusbarnotifications'
+include ':app', ':othermodule', ':malib', ':actund', ':interact', ':lifecycle', ':jetpack', ':fragments', ':recyclerview', ':dialogs', ':statusbarnotifications', ':asyncops'
