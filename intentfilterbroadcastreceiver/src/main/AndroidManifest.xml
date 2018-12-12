@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.intentfilterbroadcastreceiver">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -9,47 +10,62 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".WalletActivity">
+            <intent-filter>
+                <action android:name="com.codekul.action.wallet" />
+                <action android:name="android.intent.action.MUSIC_PLAYER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="audio/*" />
+                <data android:mimeType="application/ogg" />
+                <data android:mimeType="application/x-ogg" />
+                <data android:mimeType="application/itunes" />
+                <data android:scheme="file" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.codekul.action.wallet" />
+                <action android:name="android.intent.action.MUSIC_PLAYER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="audio/*" />
+                <data android:mimeType="application/ogg" />
+                <data android:mimeType="application/x-ogg" />
+                <data android:mimeType="application/itunes" />
+                <data android:scheme="http" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.codekul.action.wallet" />
+                <action android:name="android.intent.action.MUSIC_PLAYER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="audio/*" />
+                <data android:mimeType="application/ogg" />
+                <data android:mimeType="application/x-ogg" />
+                <data android:mimeType="application/itunes" />
+                <data android:scheme="content" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".BroadcastActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".WalletActivity">
-            <intent-filter>
-                <action android:name="com.codekul.action.wallet"/>
-                <action android:name="android.intent.action.MUSIC_PLAYER"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <data android:mimeType="audio/*" />
-                <data android:mimeType="application/ogg"/>
-                <data android:mimeType="application/x-ogg"/>
-                <data android:mimeType="application/itunes"/>
-                <data android:scheme="file"/>
-            </intent-filter>
 
+        <receiver
+            android:name=".MyReceiver"
+            android:enabled="true"
+            android:exported="true">
             <intent-filter>
-                <action android:name="com.codekul.action.wallet"/>
-                <action android:name="android.intent.action.MUSIC_PLAYER"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <data android:mimeType="audio/*" />
-                <data android:mimeType="application/ogg"/>
-                <data android:mimeType="application/x-ogg"/>
-                <data android:mimeType="application/itunes"/>
-                <data android:scheme="http"/>
+                <action android:name="android.intent.action.AIRPLANE_MODE" />
             </intent-filter>
-
-            <intent-filter>
-                <action android:name="com.codekul.action.wallet"/>
-                <action android:name="android.intent.action.MUSIC_PLAYER"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <data android:mimeType="audio/*" />
-                <data android:mimeType="application/ogg"/>
-                <data android:mimeType="application/x-ogg"/>
-                <data android:mimeType="application/itunes"/>
-                <data android:scheme="content"/>
-            </intent-filter>
-        </activity>
+        </receiver>
     </application>
-
 </manifest>
+
+
