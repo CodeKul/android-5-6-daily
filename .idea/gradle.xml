@@ -13,6 +13,7 @@
             <option value="$PROJECT_DIR$/asyncops" />
             <option value="$PROJECT_DIR$/dialogs" />
             <option value="$PROJECT_DIR$/fragments" />
+            <option value="$PROJECT_DIR$/intentfilterbroadcastreceiver" />
             <option value="$PROJECT_DIR$/interact" />
             <option value="$PROJECT_DIR$/jetpack" />
             <option value="$PROJECT_DIR$/lifecycle" />
