@@ -1,6 +1,6 @@
 package com.example.intentfilterbroadcastreceiver
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
 class WalletActivity : AppCompatActivity() {

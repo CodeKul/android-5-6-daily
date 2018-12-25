@@ -1,6 +1,6 @@
 package com.codekul.jetpack
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.codekul.jetpack.ui.main.MainFragment
 

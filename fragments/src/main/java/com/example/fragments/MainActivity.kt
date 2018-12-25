@@ -1,8 +1,8 @@
 package com.example.fragments
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         ))
     }
 
-    fun loadFrag(frag : Fragment)  {
+    fun loadFrag(frag : androidx.fragment.app.Fragment)  {
         val txn = supportFragmentManager.beginTransaction()
         txn.replace(R.id.frameLayout, frag)
         txn.commit()

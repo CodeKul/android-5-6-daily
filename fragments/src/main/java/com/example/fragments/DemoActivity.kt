@@ -1,8 +1,8 @@
 package com.example.fragments
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.LayoutInflater
@@ -32,14 +32,14 @@ class DemoActivity : AppCompatActivity() {
         loadFrag(Frag2())
     }
 
-    fun loadFrag(frag : Fragment) {
+    fun loadFrag(frag : androidx.fragment.app.Fragment) {
         val txn = supportFragmentManager.beginTransaction()
         txn.replace(R.id.frmLt, frag)
         txn.commit()
     }
 }
 
-class Frag1() : Fragment() {
+class Frag1() : androidx.fragment.app.Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         val rtVw = inflater.inflate(R.layout.frag1, container, false)
@@ -61,7 +61,7 @@ class Frag1() : Fragment() {
     }
 }
 
-class Frag2() : Fragment() {
+class Frag2() : androidx.fragment.app.Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val rtVw = inflater.inflate(R.layout.frag2, container, false)
@@ -88,7 +88,7 @@ class Frag2() : Fragment() {
     }
 }
 
-class Frag3() : Fragment() {
+class Frag3() : androidx.fragment.app.Fragment() {
     companion object {
         fun getInstance(mob : String) :  Frag3 {
 

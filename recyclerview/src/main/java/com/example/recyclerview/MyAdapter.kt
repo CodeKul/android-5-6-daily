@@ -1,7 +1,7 @@
 package com.example.recyclerview
 
 import android.content.Context
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,7 +12,7 @@ class MyAdapter (
         private val context : Context,
         private val dataSet : List<MyData>,
         private  val fn : (pos : Int) -> Unit
-): RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
+): androidx.recyclerview.widget.RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, p1: Int): MyViewHolder {
 
@@ -38,7 +38,7 @@ class MyAdapter (
 
     class MyViewHolder(
             val view : View
-    ) : RecyclerView.ViewHolder(view) {
+    ) : androidx.recyclerview.widget.RecyclerView.ViewHolder(view) {
 
         fun txt() = view.findViewById<TextView>(R.id.txt)
 

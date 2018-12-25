@@ -1,6 +1,6 @@
 package com.example.asyncops
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
