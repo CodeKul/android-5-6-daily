@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btEn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:text="Enable"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btFind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Find"
+        app:layout_constraintEnd_toEndOf="@+id/btEn"
+        app:layout_constraintTop_toBottomOf="@+id/btEn" />
+
+    <Button
+        android:id="@+id/btSer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Server"
+        app:layout_constraintStart_toStartOf="@+id/btFind"
+        app:layout_constraintTop_toBottomOf="@+id/btFind" />
+
+    <Button
+        android:id="@+id/btCl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:text="Client"
+        app:layout_constraintStart_toStartOf="@+id/btSer"
+        app:layout_constraintTop_toBottomOf="@+id/btSer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
